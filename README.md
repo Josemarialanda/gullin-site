@@ -12,12 +12,14 @@ It is a plain static site: HTML, CSS and a little JavaScript. There is no build 
 | `assets/css/site.css` | Page styles. |
 | `assets/css/tokens.css`, `clay-bundle.css` | Clay design-system colors, type and spacing. |
 | `assets/css/fonts.css`, `assets/fonts/` | Self-hosted Inter and Hanken Grotesk fonts. |
-| `assets/js/site.js` | English/Spanish copy, the language switch and the waiting-list form. |
+| `assets/js/site.js` | English/Spanish page copy, the language switch and the waiting-list form. |
+| `assets/js/flow.js` | The example task in the hero and the "How a flow works" diagram, with their English/Spanish text. |
 
 ## Updating the site
 
 1. **Edit the files.**
    - Text is in `assets/js/site.js`, in the `COPY` object. Change both `en` and `es`. The text in `index.html` is only what shows before the script runs, so keep it in line with the English copy.
+   - The example task's text is in `COPY` in `assets/js/flow.js`. The business-type flows in the diagram are in `FLOWS` in the same file: each step is `[lane, English, Spanish]`, where the lane is `inbox`, `gullin` or `you`. Keep a `you` step before anything that goes to a client.
    - Layout and colors are in `assets/css/site.css`.
 
 2. **Preview locally** from this folder:

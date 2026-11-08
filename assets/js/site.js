@@ -1,4 +1,5 @@
 // Gullin waiting-list page: EN/ES copy switch and the email form.
+// The example task and the flow diagram live in flow.js.
 //
 // Signups go to Web3Forms (web3forms.com), which emails each one to you.
 // Get a key with "Create your Access Key" on web3forms.com and paste it here.
@@ -22,12 +23,13 @@ var WEB3FORMS_ACCESS_KEY = 'a86db51d-e0b1-45d7-87a5-73ed2df001fb';
       busy: 'Too many tries. Wait a minute, then try again.',
       thanks: 'Thank you. You are on the list.',
       thanksSub: 'We send you an email when Gullin opens.',
-      alt: 'One flow in four steps: a new client email, Gullin writes the draft, you approve it, the invoice is paid',
-      c1tag: 'New email', c1subject: 'Blog post for March?', c1body: 'Hi! Do you have time for a 2,000-word post in March? Our budget is about $1,000.',
-      c2tag: 'Gullin writes', c2title: 'Reply with your rates and dates',
-      c3tag: 'You approve', c3title: 'Send the reply to Sam?', c3ok: 'Approve', c3edit: 'Edit',
-      c4tag: 'Invoice paid',
-      pill1: 'No subscription', pill2: 'You check every draft'
+      navHow: 'How it works',
+      howEyebrow: 'How a flow works',
+      howTitle: 'Every task, step by step',
+      howSub: 'A flow joins tested steps into one process for your type of business. Gullin does the email work. You approve every message before it reaches a client.',
+      tabsLabel: 'Business type',
+      playFlow: 'Play the flow',
+      legend: 'Yellow steps are yours. Nothing reaches a client until you approve it.'
     },
     es: {
       langLabel: 'Idioma',
@@ -44,12 +46,13 @@ var WEB3FORMS_ACCESS_KEY = 'a86db51d-e0b1-45d7-87a5-73ed2df001fb';
       busy: 'Demasiados intentos. Espera un minuto e inténtalo de nuevo.',
       thanks: 'Gracias. Ya estás en la lista.',
       thanksSub: 'Te enviamos un correo cuando Gullin abra.',
-      alt: 'Un flujo en cuatro pasos: llega un correo de un cliente, Gullin escribe el borrador, tú lo apruebas y la factura se cobra',
-      c1tag: 'Correo nuevo', c1subject: '¿Un artículo para marzo?', c1body: '¡Hola! ¿Tienes tiempo para un artículo de 2.000 palabras en marzo? Nuestro presupuesto es de unos 1.000 $.',
-      c2tag: 'Gullin escribe', c2title: 'Respuesta con tus tarifas y fechas',
-      c3tag: 'Tú apruebas', c3title: '¿Enviar la respuesta a Sam?', c3ok: 'Aprobar', c3edit: 'Editar',
-      c4tag: 'Factura cobrada',
-      pill1: 'Sin suscripción', pill2: 'Revisas cada borrador'
+      navHow: 'Cómo funciona',
+      howEyebrow: 'Cómo funciona un flujo',
+      howTitle: 'Cada tarea, paso a paso',
+      howSub: 'Un flujo une pasos probados en un solo proceso para tu tipo de negocio. Gullin hace el trabajo de correo. Tú apruebas cada mensaje antes de que llegue a un cliente.',
+      tabsLabel: 'Tipo de negocio',
+      playFlow: 'Ver el flujo',
+      legend: 'Los pasos amarillos son tuyos. Nada llega a un cliente sin tu aprobación.'
     }
   };
   var STORE_KEY = 'gullin-lang';
@@ -95,6 +98,8 @@ var WEB3FORMS_ACCESS_KEY = 'a86db51d-e0b1-45d7-87a5-73ed2df001fb';
       b.tabIndex = on ? 0 : -1;
     });
     renderHelp();
+    // flow.js listens for this to redraw the demo and the diagram.
+    document.dispatchEvent(new CustomEvent('gullin:lang', { detail: next }));
     if (save) { try { localStorage.setItem(STORE_KEY, next); } catch (e) {} }
   }
 
