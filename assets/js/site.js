@@ -26,10 +26,10 @@ var WEB3FORMS_ACCESS_KEY = 'a86db51d-e0b1-45d7-87a5-73ed2df001fb';
       navHow: 'How it works',
       howEyebrow: 'How a flow works',
       howTitle: 'Every task, step by step',
-      howSub: 'A flow joins tested steps into one process for your type of business. Gullin does the email work. You approve every message before it reaches a client.',
+      howSub: 'A flow joins tested steps into one process for your type of business. Gullin does the email work. You approve every reply before it reaches a client.',
       tabsLabel: 'Business type',
       playFlow: 'Play the flow',
-      legend: 'Yellow steps are yours. Nothing reaches a client until you approve it.'
+      legend: 'Yellow steps are yours. Gullin waits for your approval before it replies to a client.'
     },
     es: {
       langLabel: 'Idioma',
@@ -49,10 +49,10 @@ var WEB3FORMS_ACCESS_KEY = 'a86db51d-e0b1-45d7-87a5-73ed2df001fb';
       navHow: 'Cómo funciona',
       howEyebrow: 'Cómo funciona un flujo',
       howTitle: 'Cada tarea, paso a paso',
-      howSub: 'Un flujo une pasos probados en un solo proceso para tu tipo de negocio. Gullin hace el trabajo de correo. Tú apruebas cada mensaje antes de que llegue a un cliente.',
+      howSub: 'Un flujo une pasos probados en un solo proceso para tu tipo de negocio. Gullin hace el trabajo de correo. Tú apruebas cada respuesta antes de que llegue a un cliente.',
       tabsLabel: 'Tipo de negocio',
       playFlow: 'Ver el flujo',
-      legend: 'Los pasos amarillos son tuyos. Nada llega a un cliente sin tu aprobación.'
+      legend: 'Los pasos amarillos son tuyos. Gullin espera tu aprobación antes de responder a un cliente.'
     }
   };
   var STORE_KEY = 'gullin-lang';

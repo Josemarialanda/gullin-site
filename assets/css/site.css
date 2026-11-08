@@ -91,6 +91,9 @@ button,input,textarea{font:inherit;color:inherit}
 .who{display:flex;flex-direction:column;font-size:13px}
 .who strong{font-size:15px}
 
+.attachments{display:flex;flex-wrap:wrap;gap:var(--space-xs)}
+.file{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 10px;border-radius:var(--radius-sm);background:var(--clay-canvas);font-size:12px;font-weight:600}
+
 .panel-draft{background:var(--clay-lavender)}
 .typing{min-height:6.2em}
 .caret{display:inline-block;width:2px;height:1.1em;margin-left:1px;background:var(--clay-ink);vertical-align:text-bottom;animation:gl-blink 1s steps(1) infinite}

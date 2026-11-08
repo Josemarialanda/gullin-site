@@ -51,7 +51,7 @@
       <!-- Live example task: filled and driven by flow.js -->
       <section class="demo" id="demo" aria-labelledby="demo-title">
         <div class="demo-head">
-          <span class="tag" id="demo-title" data-f="demoTag">Example task · Copywriter</span>
+          <span class="tag" id="demo-title" data-f="demoTag">Example task · Customs broker</span>
           <span class="spacer"></span>
           <button type="button" class="icon-btn" id="demo-toggle" aria-label="Pause">
             <svg class="i-pause" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M8 5v14M16 5v14"></path></svg>
@@ -66,21 +66,25 @@
           <!-- 1 · email -->
           <article class="panel panel-email" data-step="0">
             <span class="panel-head"><span class="tag" data-f="s0tag">New email</span><span class="spacer"></span><span class="time">09:12</span></span>
-            <span class="from"><span class="avatar" aria-hidden="true">S</span><span class="who"><strong>Sam · Brightwater</strong><span data-f="subject">Blog post for March?</span></span></span>
-            <p class="panel-body" data-f="enquiry">Hi! Do you have time for a 2,000-word post in March? Our budget is about $1,000.</p>
+            <span class="from"><span class="avatar" aria-hidden="true">M</span><span class="who"><strong>Maria · Rio Verde Imports</strong><span data-f="subject">Container arriving Thursday</span></span></span>
+            <p class="panel-body" data-f="enquiry">Hi! Our container from Shanghai lands on Thursday. The invoice and packing list are attached. Can you clear it?</p>
+            <span class="attachments">
+              <span class="file"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"></path><path d="M14 3v4h4"></path></svg><span data-f="file1">invoice.pdf</span></span>
+              <span class="file"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"></path><path d="M14 3v4h4"></path></svg><span data-f="file2">packing-list.pdf</span></span>
+            </span>
           </article>
 
           <!-- 2 · Gullin writes -->
           <article class="panel panel-draft" data-step="1">
             <span class="panel-head"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg><span class="tag" data-f="s1tag">Gullin writes</span></span>
-            <strong class="panel-title" data-f="s1title">Reply with your rates and dates</strong>
+            <strong class="panel-title" data-f="s1title">Request for the missing papers</strong>
             <p class="panel-body typing"><span id="demo-typed"></span><span class="caret" aria-hidden="true"></span></p>
           </article>
 
           <!-- 3 · you approve -->
           <article class="panel panel-approve" data-step="2">
             <span class="panel-head"><span class="tag" data-f="s2tag">You approve</span><span class="spacer"></span><span class="your-turn" data-f="yourTurn">Your turn</span></span>
-            <strong class="panel-title" data-f="s2title">Send the reply to Sam?</strong>
+            <strong class="panel-title" data-f="s2title">Send the request to Maria?</strong>
             <label class="sr-only" for="demo-draft" data-f="draftLabel">Draft reply</label>
             <textarea id="demo-draft" class="draft" rows="4" readonly></textarea>
             <span class="actions">
@@ -91,18 +95,18 @@
 
           <!-- 4 · invoice -->
           <article class="panel panel-invoice" data-step="3">
-            <span class="panel-head"><span class="tag" data-f="s3tag">Invoice sent</span><span class="spacer"></span><span class="time">#0042</span></span>
-            <span class="invoice-row"><span data-f="invoiceLine">Brightwater · Blog post, March</span><strong>$1,040</strong></span>
-            <span class="invoice-meta" data-f="invoiceDue">Due in 14 days</span>
-            <span class="sent-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7z"></path></svg><span data-f="invoiceSent">Sent to sam@brightwater.example</span></span>
+            <span class="panel-head"><span class="tag" data-f="s3tag">Shipment cleared</span><span class="spacer"></span><span class="time">#0042</span></span>
+            <span class="invoice-row"><span data-f="invoiceLine">Rio Verde Imports · Customs clearance</span><strong>$620</strong></span>
+            <span class="invoice-meta" data-f="invoiceDue">Invoice due in 14 days</span>
+            <span class="sent-line"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7z"></path></svg><span data-f="invoiceSent">Update and invoice sent to maria@rioverde.example</span></span>
           </article>
 
           <!-- 5 · paid -->
           <article class="panel panel-paid" data-step="4">
             <span class="paid-tick" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
             <span class="tag" data-f="s4tag">Invoice paid</span>
-            <strong class="paid-amount">$1,040</strong>
-            <span data-f="s4body">Brightwater paid. The task is done.</span>
+            <strong class="paid-amount">$620</strong>
+            <span data-f="s4body">Rio Verde Imports paid. The shipment is done.</span>
           </article>
         </div>
 
@@ -115,7 +119,7 @@
       <div class="how-intro">
         <span class="clay-eyebrow" data-i18n="howEyebrow">How a flow works</span>
         <h2 class="clay-display-md" id="how-title" data-i18n="howTitle">Every task, step by step</h2>
-        <p class="clay-body-md" data-i18n="howSub">A flow joins tested steps into one process for your type of business. Gullin does the email work. You approve every message before it reaches a client.</p>
+        <p class="clay-body-md" data-i18n="howSub">A flow joins tested steps into one process for your type of business. Gullin does the email work. You approve every reply before it reaches a client.</p>
       </div>
 
       <div class="tabs" role="tablist" id="flow-tabs" aria-label="Business type" data-i18n-attr="aria-label:tabsLabel"></div>
@@ -134,7 +138,7 @@
             <svg class="links" id="links" aria-hidden="true"></svg>
           </div>
         </div>
-        <p class="legend"><span class="legend-dot lane-you" aria-hidden="true"></span><span data-i18n="legend">Yellow steps are yours. Nothing reaches a client until you approve it.</span></p>
+        <p class="legend"><span class="legend-dot lane-you" aria-hidden="true"></span><span data-i18n="legend">Yellow steps are yours. Gullin waits for your approval before it replies to a client.</span></p>
       </div>
     </section>
 

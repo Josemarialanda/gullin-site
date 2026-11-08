@@ -7,13 +7,13 @@ body{background:var(--clay-canvas);color:var(--clay-ink);font-family:var(--font-
 .banner{position:relative;box-sizing:border-box;overflow:hidden;background:var(--clay-canvas)}
 
 .wordmark{font-family:var(--font-display);font-weight:500;letter-spacing:-0.02em;line-height:1}
-.headline{margin:0;font-family:var(--font-display);font-weight:500;line-height:1.02;letter-spacing:-0.035em}
-.sub{margin:0;color:var(--clay-body);line-height:1.4}
+.headline{margin:0;font-family:var(--font-display);font-weight:500;line-height:1.02;letter-spacing:-0.035em;text-wrap:balance}
+.sub{margin:0;color:var(--clay-body);line-height:1.4;text-wrap:pretty}
 .url{font-weight:600}
 
 /* Flow cards */
 .card{position:relative;box-sizing:border-box;border-radius:28px;display:flex;flex-direction:column;flex:none}
-.tag{font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.tag{font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
 .c-email{background:var(--clay-pink)}
 .c-draft{background:var(--clay-lavender)}
 .c-approve{background:#fff;border:2px solid var(--clay-hairline);box-shadow:0 10px 30px rgba(10,10,10,.08)}

@@ -19,7 +19,7 @@ It is a plain static site: HTML, CSS and a little JavaScript. There is no build 
 
 1. **Edit the files.**
    - Text is in `assets/js/site.js`, in the `COPY` object. Change both `en` and `es`. The text in `index.html` is only what shows before the script runs, so keep it in line with the English copy.
-   - The example task's text is in `COPY` in `assets/js/flow.js`. The business-type flows in the diagram are in `FLOWS` in the same file: each step is `[lane, English, Spanish]`, where the lane is `inbox`, `gullin` or `you`. Keep a `you` step before anything that goes to a client.
+   - The example task's text is in `COPY` in `assets/js/flow.js`. The business-type flows in the diagram are in `FLOWS` in the same file: each step is `[lane, English, Spanish]`, where the lane is `inbox`, `gullin` or `you`. Keep a `you` step before any reply to a client.
    - Layout and colors are in `assets/css/site.css`.
 
 2. **Preview locally** from this folder:

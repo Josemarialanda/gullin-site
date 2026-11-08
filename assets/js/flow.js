@@ -5,49 +5,51 @@
 
   var COPY = {
     en: {
-      demoTag: 'Example task · Copywriter',
-      steps: ['Email', 'Draft', 'Approve', 'Invoice', 'Paid'],
+      demoTag: 'Example task · Customs broker',
+      steps: ['Email', 'Check', 'Approve', 'Cleared', 'Paid'],
       actors: { client: 'Client', gullin: 'Gullin', you: 'You' },
       captions: [
-        ['client', 'A client asks for a blog post. Gullin reads the email.'],
-        ['gullin', 'Gullin writes a reply with your rates and dates.'],
-        ['you', 'Your turn. Nothing reaches a client until you approve it.'],
-        ['gullin', 'Sam says yes. Gullin sends the invoice.'],
-        ['gullin', 'Gullin follows up until the invoice is paid.']
+        ['client', 'A client sends the shipping documents. Gullin reads the email.'],
+        ['gullin', 'Gullin sees two papers are missing and writes a request.'],
+        ['you', 'Your turn. Gullin waits for your approval before it replies.'],
+        ['gullin', 'The papers arrive, the shipment clears and your invoice goes out.'],
+        ['gullin', 'Gullin follows up until duties and fees are paid.']
       ],
-      s0tag: 'New email', subject: 'Blog post for March?',
-      enquiry: 'Hi! Do you have time for a 2,000-word post in March? Our budget is about $1,000.',
-      s1tag: 'Gullin writes', s1title: 'Reply with your rates and dates',
-      draft: 'Hi Sam, thanks for thinking of me! I can deliver a 2,000-word post by 20 March. My rate is $1,040, with one round of edits. Shall I send the agreement?',
-      s2tag: 'You approve', s2title: 'Send the reply to Sam?', yourTurn: 'Your turn',
+      s0tag: 'New email', subject: 'Container arriving Thursday',
+      enquiry: 'Hi! Our container from Shanghai lands on Thursday. The invoice and packing list are attached. Can you clear it?',
+      file1: 'invoice.pdf', file2: 'packing-list.pdf',
+      s1tag: 'Gullin writes', s1title: 'Request for the missing papers',
+      draft: 'Hi Maria, thanks for the documents. To clear the shipment on Thursday I still need the bill of lading and the certificate of origin. Could you send them by Wednesday?',
+      s2tag: 'You approve', s2title: 'Send the request to Maria?', yourTurn: 'Your turn',
       draftLabel: 'Draft reply', approve: 'Approve', edit: 'Edit', editing: 'Editing',
-      s3tag: 'Invoice sent', invoiceLine: 'Brightwater · Blog post, March', invoiceDue: 'Due in 14 days',
-      invoiceSent: 'Sent to sam@brightwater.example',
-      s4tag: 'Invoice paid', s4body: 'Brightwater paid. The task is done.',
+      s3tag: 'Shipment cleared', invoiceLine: 'Rio Verde Imports · Customs clearance', invoiceDue: 'Invoice due in 14 days',
+      invoiceSent: 'Update and invoice sent to maria@rioverde.example',
+      s4tag: 'Invoice paid', s4body: 'Rio Verde Imports paid. The shipment is done.',
       pause: 'Pause the example', play: 'Play the example', replay: 'Replay the example',
       stepLabel: 'Step',
       lanes: { inbox: 'Your inbox', gullin: 'Gullin', you: 'You' }
     },
     es: {
-      demoTag: 'Tarea de ejemplo · Redactor',
-      steps: ['Correo', 'Borrador', 'Aprobar', 'Factura', 'Cobrado'],
+      demoTag: 'Tarea de ejemplo · Agente de aduanas',
+      steps: ['Correo', 'Revisión', 'Aprobar', 'Despacho', 'Cobrado'],
       actors: { client: 'Cliente', gullin: 'Gullin', you: 'Tú' },
       captions: [
-        ['client', 'Un cliente pide un artículo. Gullin lee el correo.'],
-        ['gullin', 'Gullin escribe una respuesta con tus tarifas y fechas.'],
-        ['you', 'Te toca. Nada llega a un cliente sin tu aprobación.'],
-        ['gullin', 'Sam dice que sí. Gullin envía la factura.'],
-        ['gullin', 'Gullin hace el seguimiento hasta que se cobra la factura.']
+        ['client', 'Un cliente envía los documentos del envío. Gullin lee el correo.'],
+        ['gullin', 'Gullin ve que faltan dos papeles y escribe una petición.'],
+        ['you', 'Te toca. Gullin espera tu aprobación antes de responder.'],
+        ['gullin', 'Llegan los papeles, el envío se despacha y sale tu factura.'],
+        ['gullin', 'Gullin hace el seguimiento hasta que se pagan aranceles y honorarios.']
       ],
-      s0tag: 'Correo nuevo', subject: '¿Un artículo para marzo?',
-      enquiry: '¡Hola! ¿Tienes tiempo para un artículo de 2.000 palabras en marzo? Nuestro presupuesto es de unos 1.000 $.',
-      s1tag: 'Gullin escribe', s1title: 'Respuesta con tus tarifas y fechas',
-      draft: 'Hola Sam, ¡gracias por pensar en mí! Puedo entregar un artículo de 2.000 palabras antes del 20 de marzo. Mi tarifa es de 1.040 $, con una ronda de cambios. ¿Te envío el acuerdo?',
-      s2tag: 'Tú apruebas', s2title: '¿Enviar la respuesta a Sam?', yourTurn: 'Te toca',
+      s0tag: 'Correo nuevo', subject: 'El contenedor llega el jueves',
+      enquiry: '¡Hola! Nuestro contenedor desde Shanghái llega el jueves. Te adjunto la factura y la lista de empaque. ¿Puedes despacharlo?',
+      file1: 'factura.pdf', file2: 'lista-de-empaque.pdf',
+      s1tag: 'Gullin escribe', s1title: 'Petición de los papeles que faltan',
+      draft: 'Hola Maria, gracias por los documentos. Para despachar el envío el jueves todavía necesito el conocimiento de embarque y el certificado de origen. ¿Me los puedes enviar antes del miércoles?',
+      s2tag: 'Tú apruebas', s2title: '¿Enviar la petición a Maria?', yourTurn: 'Te toca',
       draftLabel: 'Borrador de respuesta', approve: 'Aprobar', edit: 'Editar', editing: 'Editando',
-      s3tag: 'Factura enviada', invoiceLine: 'Brightwater · Artículo, marzo', invoiceDue: 'Vence en 14 días',
-      invoiceSent: 'Enviada a sam@brightwater.example',
-      s4tag: 'Factura cobrada', s4body: 'Brightwater pagó. La tarea está completa.',
+      s3tag: 'Envío despachado', invoiceLine: 'Rio Verde Imports · Despacho aduanero', invoiceDue: 'Factura con vencimiento en 14 días',
+      invoiceSent: 'Aviso y factura enviados a maria@rioverde.example',
+      s4tag: 'Factura cobrada', s4body: 'Rio Verde Imports pagó. El envío está completo.',
       pause: 'Pausar el ejemplo', play: 'Reproducir el ejemplo', replay: 'Repetir el ejemplo',
       stepLabel: 'Paso',
       lanes: { inbox: 'Tu bandeja', gullin: 'Gullin', you: 'Tú' }
@@ -55,54 +57,34 @@
   };
 
   // Each flow is a list of [lane, English, Spanish]. Lanes: inbox, gullin, you.
-  // Rule kept in every flow: a message to a client goes out only after a "you" step.
+  // Rule kept in every flow: Gullin replies to a client only after a "you" step.
   var FLOWS = [
-    { id: 'copy', tab: ['Copywriters', 'Redactores'], name: ['Enquiry to paid', 'De la consulta al cobro'], steps: [
-      ['inbox', 'An enquiry arrives', 'Llega una consulta'],
-      ['gullin', 'Drafts a reply with your rates', 'Escribe una respuesta con tus tarifas'],
+    { id: 'customs', tab: ['Customs broker', 'Agente de aduanas'], name: ['Documents to clearance', 'De los documentos al despacho'], steps: [
+      ['inbox', 'A client sends the shipping documents', 'Un cliente envía los documentos del envío'],
+      ['gullin', 'Checks them and lists what is missing', 'Los revisa y anota lo que falta'],
+      ['you', 'Approve the request for missing papers', 'Apruebas la petición de lo que falta'],
+      ['inbox', 'The client sends the rest', 'El cliente envía el resto'],
+      ['gullin', 'Drafts the clearance update and your invoice', 'Prepara el aviso de despacho y tu factura'],
+      ['you', 'Approve and send', 'Apruebas y envías'],
+      ['gullin', 'Chases payment for duties and fees', 'Reclama el pago de aranceles y honorarios']
+    ] },
+    { id: 'parts', tab: ['Auto parts wholesale', 'Mayorista de autopartes'], name: ['Quote to paid order', 'De la cotización al cobro'], steps: [
+      ['inbox', 'A shop or distributor asks for parts by part number', 'Un taller o distribuidor pide piezas por número de parte'],
+      ['gullin', 'Checks stock and drafts a quote at that customer\'s prices', 'Revisa el inventario y prepara la cotización con los precios de ese cliente'],
+      ['you', 'Approve the quote', 'Apruebas la cotización'],
+      ['inbox', 'The order comes in', 'Llega el pedido'],
+      ['gullin', 'Drafts the confirmation and invoice', 'Prepara la confirmación y la factura'],
+      ['you', 'Approve and send', 'Apruebas y envías'],
+      ['gullin', 'Chases overdue invoices', 'Reclama las facturas vencidas']
+    ] },
+    { id: 'coffee', tab: ['Coffee producer', 'Productor de café'], name: ['Sample to repeat order', 'De la muestra al nuevo pedido'], steps: [
+      ['inbox', 'A café or roaster asks about your coffee', 'Una cafetería o un tostador pregunta por tu café'],
+      ['gullin', 'Drafts a reply with prices, lots and a sample offer', 'Escribe una respuesta con precios, lotes y una muestra'],
       ['you', 'Approve the reply', 'Apruebas la respuesta'],
-      ['gullin', 'Drafts the post from the brief', 'Escribe el texto a partir del brief'],
-      ['you', 'Approve the draft', 'Apruebas el borrador'],
-      ['inbox', 'The client signs off', 'El cliente da el visto bueno'],
-      ['gullin', 'Sends the invoice and chases payment', 'Envía la factura y reclama el pago']
-    ] },
-    { id: 'social', tab: ['Social media', 'Redes sociales'], name: ['Plan to report', 'Del plan al informe'], steps: [
-      ['inbox', 'A client sends the weekly update', 'Un cliente envía la novedad semanal'],
-      ['gullin', 'Turns it into post drafts', 'La convierte en borradores de publicaciones'],
-      ['you', 'Approve the posts', 'Apruebas las publicaciones'],
-      ['gullin', 'Drafts the monthly report', 'Escribe el informe mensual'],
-      ['you', 'Approve the report', 'Apruebas el informe'],
-      ['gullin', 'Sends it to the client', 'Lo envía al cliente']
-    ] },
-    { id: 'seo', tab: ['SEO', 'SEO'], name: ['Monthly client reports', 'Informes mensuales'], steps: [
-      ['inbox', 'Ranking emails arrive all month', 'Llegan correos de posiciones todo el mes'],
-      ['gullin', 'Collects them for each client', 'Los reúne por cliente'],
-      ['gullin', 'Drafts a plain-language report', 'Escribe un informe claro'],
-      ['you', 'Approve each report', 'Apruebas cada informe'],
-      ['gullin', 'Sends it to the client', 'Lo envía al cliente']
-    ] },
-    { id: 'pod', tab: ['Print-on-demand', 'Impresión bajo demanda'], name: ['Order problems, handled', 'Problemas con pedidos, resueltos'], steps: [
-      ['inbox', 'A customer writes about a late, wrong or damaged print', 'Un cliente escribe por una impresión tardía, errónea o dañada'],
-      ['gullin', 'Sorts it by problem', 'Lo clasifica por tipo de problema'],
-      ['gullin', 'Drafts a reply', 'Escribe una respuesta'],
-      ['you', 'Approve the reply', 'Apruebas la respuesta'],
-      ['gullin', 'Sends it to the customer', 'La envía al cliente']
-    ] },
-    { id: 'coach', tab: ['Coaches', 'Coaches'], name: ['Lead to renewal', 'Del contacto a la renovación'], steps: [
-      ['inbox', 'A new lead writes in', 'Escribe un posible cliente'],
-      ['gullin', 'Qualifies the lead and drafts a welcome', 'Valora el contacto y prepara la bienvenida'],
-      ['you', 'Approve the welcome', 'Apruebas la bienvenida'],
-      ['inbox', 'Weekly check-ins arrive', 'Llegan las revisiones semanales'],
-      ['gullin', 'Drafts each reply', 'Escribe cada respuesta'],
-      ['you', 'Approve the replies', 'Apruebas las respuestas'],
-      ['gullin', 'Reminds the client to renew', 'Recuerda al cliente que renueve']
-    ] },
-    { id: 'free', tab: ['Freelancers', 'Freelancers'], name: ['Quote to paid', 'Del presupuesto al cobro'], steps: [
-      ['gullin', 'Drafts a follow-up on your quote', 'Escribe un seguimiento de tu presupuesto'],
-      ['you', 'Approve the follow-up', 'Apruebas el seguimiento'],
-      ['inbox', 'The client says yes', 'El cliente dice que sí'],
-      ['gullin', 'Makes the invoice', 'Prepara la factura'],
-      ['gullin', 'Chases late payment', 'Reclama el pago atrasado']
+      ['inbox', 'They order after trying the sample', 'Hacen un pedido después de probar la muestra'],
+      ['gullin', 'Drafts the confirmation and invoice', 'Prepara la confirmación y la factura'],
+      ['you', 'Approve and send', 'Apruebas y envías'],
+      ['gullin', 'Suggests a reorder before they run out', 'Propone un nuevo pedido antes de que se les acabe']
     ] }
   ];
   var LANES = ['inbox', 'gullin', 'you'];
