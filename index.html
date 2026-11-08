@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gullin: AI flows for small businesses</title>
+<meta name="description" content="Pick a ready-made flow for your type of business. Gullin reads your email, writes the drafts and chases the follow-ups.">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/clay-bundle.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/site.js" defer></script>
+</head>
+<body>
+<div class="page">
+
+  <header class="wrap site-header">
+    <span class="logo">Gullin</span>
+    <span class="spacer"></span>
+    <div class="lang" role="radiogroup" aria-label="Language" data-i18n-attr="aria-label:langLabel">
+      <button type="button" role="radio" aria-checked="true" data-lang="en">EN</button>
+      <button type="button" role="radio" aria-checked="false" data-lang="es" tabindex="-1">ES</button>
+    </div>
+  </header>
+
+  <main class="wrap hero">
+    <div class="hero-copy">
+      <span class="clay-eyebrow" data-i18n="eyebrow">AI flows for small businesses</span>
+      <h1 class="clay-display-xl" data-i18n="title">From first enquiry to final payment.</h1>
+      <p class="clay-body-md lede" data-i18n="sub">Pick a ready-made flow for your type of business. Gullin reads your email, writes the drafts and chases the follow-ups. You approve each draft and pay only when it runs.</p>
+
+      <form class="waitlist" id="waitlist" novalidate>
+        <label for="wl-email" data-i18n="label">Join the waiting list</label>
+        <div class="row">
+          <input id="wl-email" name="email" type="email" autocomplete="email" placeholder="you@yourbusiness.com" data-i18n-attr="placeholder:placeholder" aria-invalid="false" aria-describedby="wl-help">
+          <button type="submit" data-i18n="button">Join the waiting list</button>
+        </div>
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <span class="help" id="wl-help" data-i18n="note">No subscription. We tell you when Gullin opens.</span>
+      </form>
+
+      <div class="thanks" id="waitlist-thanks" role="status" hidden>
+        <span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+        <span class="text"><strong data-i18n="thanks">Thank you. You are on the list.</strong><span class="sub" data-i18n="thanksSub">We send you an email when Gullin opens.</span></span>
+      </div>
+    </div>
+
+    <figure class="flow" role="img" aria-label="One flow in four steps: a new client email, Gullin writes the draft, you approve it, the invoice is paid" data-i18n-attr="aria-label:alt">
+      <div class="flow-stage">
+
+        <div class="card card-email">
+          <span class="head"><span class="tag">1 · <span data-i18n="c1tag">New email</span></span><span class="spacer"></span><span class="time">09:12</span></span>
+          <span class="from"><span class="avatar">S</span><span class="who"><span class="card-title">Sam · Brightwater</span><span class="subject" data-i18n="c1subject">Blog post for March?</span></span></span>
+          <span class="body" data-i18n="c1body">Hi! Do you have time for a 2,000-word post in March? Our budget is about $1,000.</span>
+        </div>
+
+        <div class="card card-draft">
+          <span class="head"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path></svg><span class="tag">2 · <span data-i18n="c2tag">Gullin writes</span></span></span>
+          <span class="card-title" data-i18n="c2title">Reply with your rates and dates</span>
+          <span class="lines"><span style="width:92%"></span><span style="width:78%"></span><span style="width:55%"></span></span>
+          <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
+        </div>
+
+        <div class="card card-approve">
+          <span class="tag">3 · <span data-i18n="c3tag">You approve</span></span>
+          <span class="card-title" data-i18n="c3title">Send the reply to Sam?</span>
+          <span class="chips"><span class="chip chip-dark" data-i18n="c3ok">Approve</span><span class="chip chip-line" data-i18n="c3edit">Edit</span></span>
+        </div>
+
+        <div class="card card-paid">
+          <span class="tick" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+          <span class="text"><span class="tag">4 · <span data-i18n="c4tag">Invoice paid</span></span><span class="amount">$1,040</span></span>
+        </div>
+
+        <span class="pill pill-1" data-i18n="pill1">No subscription</span>
+        <span class="pill pill-2" data-i18n="pill2">You check every draft</span>
+      </div>
+    </figure>
+  </main>
+
+  <footer class="wrap site-footer">© 2026 Gullin</footer>
+</div>
+</body>
+</html>

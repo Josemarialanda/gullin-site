@@ -1,0 +1,112 @@
+/* Gullin waiting-list page. Colors, type and spacing come from tokens.css and clay-bundle.css. */
+body{margin:0;background:var(--clay-canvas);color:var(--clay-ink);font-family:var(--font-body)}
+button,input{font:inherit;color:inherit}
+
+.page{min-height:100vh;box-sizing:border-box;display:flex;flex-direction:column}
+.wrap{max-width:var(--container-max);width:100%;margin:0 auto;padding-left:var(--space-lg);padding-right:var(--space-lg);box-sizing:border-box}
+
+/* Header */
+.site-header{padding-top:var(--space-md);padding-bottom:var(--space-md);display:flex;align-items:center;gap:var(--space-md)}
+.logo{font-family:var(--font-display);font-size:26px;font-weight:500;letter-spacing:-0.6px}
+.spacer{flex:1 1 0}
+.lang{display:flex;gap:var(--space-xxs);padding:var(--space-xxs);border-radius:var(--radius-md);background:var(--clay-surface-card)}
+.lang button{min-width:48px;height:36px;padding:0 var(--space-sm);border-radius:var(--radius-sm);border:0;font-size:14px;font-weight:600;cursor:pointer;background:transparent}
+.lang button[aria-checked="true"]{background:var(--clay-canvas);box-shadow:0 0 0 1px var(--clay-hairline)}
+.lang button:focus-visible,.waitlist button:focus-visible{outline:2px solid var(--border-focus);outline-offset:2px}
+
+/* Hero */
+.hero{flex:1 1 auto;padding-top:var(--space-lg);padding-bottom:var(--space-xl);display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-xxl)}
+.hero-copy{flex:7 1 460px;display:flex;flex-direction:column;gap:var(--space-lg)}
+.hero-copy .clay-eyebrow{color:var(--clay-muted)}
+.hero-copy h1{margin:0}
+.hero-copy .lede{margin:0;max-width:540px;font-size:18px}
+
+/* Waiting-list form */
+.waitlist{display:flex;flex-direction:column;gap:var(--space-xs);max-width:520px}
+.waitlist label{font-size:14px;font-weight:600}
+.waitlist .row{display:flex;flex-wrap:wrap;gap:var(--space-xs)}
+.waitlist input{flex:1 1 240px;min-width:0;height:52px;padding:0 var(--space-md);box-sizing:border-box;border-radius:var(--radius-md);border:1px solid var(--clay-hairline);background:var(--clay-canvas);font-size:16px;outline:none}
+.waitlist input:focus{border-color:var(--border-focus)}
+.waitlist input[aria-invalid="true"]{border-color:var(--clay-error)}
+.waitlist button{height:52px;padding:0 var(--space-lg);border-radius:var(--radius-md);border:0;background:var(--clay-primary);color:var(--clay-on-primary);font-size:15px;font-weight:600;cursor:pointer}
+.waitlist button:active{background:var(--clay-primary-active)}
+.waitlist button:disabled{cursor:progress;background:var(--clay-primary-active)}
+.waitlist .botcheck{display:none}
+.waitlist .help{font-size:13px;color:var(--clay-muted)}
+.waitlist .help.is-error{color:var(--clay-ink)}
+
+.thanks{display:flex;align-items:center;gap:var(--space-sm);max-width:520px;padding:var(--space-md) 20px;box-sizing:border-box;border-radius:var(--radius-lg);background:var(--clay-surface-card)}
+.thanks .tick{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:var(--radius-full);background:var(--clay-success)}
+.thanks .text{display:flex;flex-direction:column}
+.thanks strong{font-size:16px;font-weight:600}
+.thanks .sub{font-size:14px;color:var(--clay-body)}
+[hidden]{display:none !important}
+
+/* Flow illustration */
+.flow{flex:5 1 380px;min-width:0;margin:0;display:flex;justify-content:center}
+.flow-stage{position:relative;width:100%;max-width:560px;height:600px}
+.card{position:absolute;box-sizing:border-box;padding:22px 24px;border-radius:var(--radius-xl);display:flex;flex-direction:column}
+.tag{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.card-title{font-size:15px;font-weight:600}
+
+.card-email{left:0;top:8px;width:64%;background:var(--clay-pink);rotate:-5deg;gap:10px}
+.card-email .head{display:flex;align-items:center;gap:var(--space-xs)}
+.card-email .from{display:flex;align-items:center;gap:10px}
+.card-email .avatar{display:grid;place-items:center;width:36px;height:36px;border-radius:var(--radius-full);background:var(--clay-canvas);font-weight:600}
+.card-email .who{display:flex;flex-direction:column}
+.card-email .subject{font-size:13px}
+.card-email .body{font-size:14px;line-height:1.5}
+.time{font-size:12px;font-weight:600}
+
+.card-draft{right:0;top:150px;width:60%;background:var(--clay-lavender);rotate:4deg;gap:var(--space-sm)}
+.card-draft .head{display:flex;align-items:center;gap:var(--space-xs)}
+.lines{display:flex;flex-direction:column;gap:7px}
+.lines span{height:8px;border-radius:var(--radius-full);background:var(--clay-canvas)}
+.dots{display:flex;gap:5px}
+.dots span{width:8px;height:8px;border-radius:var(--radius-full);background:var(--clay-ink)}
+
+.card-approve{left:4%;top:318px;width:60%;background:var(--clay-canvas);border:1px solid var(--clay-hairline);box-shadow:var(--shadow-hover);rotate:-2deg;gap:var(--space-sm)}
+.card-approve .tag{color:var(--clay-muted)}
+.chips{display:flex;gap:var(--space-xs)}
+.chip{display:inline-flex;align-items:center;height:36px;padding:0 var(--space-md);border-radius:var(--radius-sm);font-size:13px;font-weight:600}
+.chip-dark{background:var(--clay-ink);color:var(--clay-on-primary)}
+.chip-line{border:1px solid var(--clay-hairline)}
+
+.card-paid{right:2%;top:452px;width:52%;padding:20px 24px;background:var(--clay-teal);color:var(--clay-on-dark);rotate:3deg;flex-direction:row;align-items:center;gap:14px}
+.card-paid .tick{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:var(--radius-full);background:var(--clay-ochre);color:var(--clay-ink)}
+.card-paid .text{display:flex;flex-direction:column}
+.card-paid .amount{font-size:18px;font-weight:600}
+
+.pill{position:absolute;padding:var(--space-xs) 14px;border-radius:var(--radius-pill);font-size:13px;font-weight:600}
+.pill-1{right:6%;top:40px;background:var(--clay-ochre);rotate:6deg}
+.pill-2{left:2%;top:520px;background:var(--clay-surface-card);rotate:-4deg}
+
+/* Motion */
+@keyframes gl-float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes gl-type{0%,100%{opacity:.35}50%{opacity:1}}
+.card-email{animation:gl-float 6s ease-in-out infinite}
+.card-draft{animation:gl-float 7s ease-in-out .8s infinite}
+.card-approve{animation:gl-float 6.5s ease-in-out 1.6s infinite}
+.card-paid{animation:gl-float 7.5s ease-in-out 2.4s infinite}
+.dots span{animation:gl-type 1.2s ease-in-out infinite}
+.dots span:nth-child(2){animation-delay:.2s}
+.dots span:nth-child(3){animation-delay:.4s}
+@media (prefers-reduced-motion: reduce){.card,.dots span{animation:none}}
+
+/* Footer */
+.site-footer{padding-top:var(--space-md);padding-bottom:var(--space-lg);font-size:13px;color:var(--clay-muted)}
+
+/* Phone width */
+@media (max-width: 600px){
+  .wrap{padding-left:var(--space-md);padding-right:var(--space-md)}
+  .hero-copy{flex-basis:100%}
+  .hero-copy h1{font-size:48px;letter-spacing:-1.5px}
+  .flow{flex-basis:100%;margin-top:var(--space-lg)}
+  .flow-stage{height:690px}
+  .card-email{width:86%}
+  .card-draft{width:80%;top:225px}
+  .card-approve{width:82%;top:405px}
+  .card-paid{width:70%;top:550px}
+  .pill-1{top:-34px}
+  .pill-2{top:645px}
+}
