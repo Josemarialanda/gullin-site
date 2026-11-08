@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Gullin banner, the four parts of the harness 1500×500</title>
+<link rel="stylesheet" href="banner.css">
+<style>
+.banner{width:1500px;height:500px;padding:56px 64px;display:flex;align-items:center;gap:36px}
+.copy{width:440px;height:100%;flex:none;display:flex;flex-direction:column;justify-content:space-between}
+.wordmark{font-size:34px}
+.eyebrow{display:block;margin-bottom:14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-muted)}
+.headline{font-size:35px;text-wrap:wrap}
+.url{font-size:20px}
+
+/* The harness: one frame holding the four parts */
+.harness{position:relative;flex:1;box-sizing:border-box;padding:30px 18px 18px;border:2px solid var(--clay-ink);border-radius:32px}
+.harness-label{position:absolute;top:-17px;left:28px;display:inline-flex;align-items:center;gap:8px;height:34px;padding:0 16px;border-radius:999px;background:var(--clay-ink);color:#fff;font-size:14px;font-weight:600}
+.parts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{min-height:300px;padding:22px 20px;gap:10px;border-radius:22px}
+.icon{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:var(--clay-canvas);color:var(--clay-ink)}
+.tag{font-size:11px;letter-spacing:.1em}
+.title{font-family:var(--font-display);font-size:30px;font-weight:500;letter-spacing:-0.02em;line-height:1}
+.body{margin:0;font-size:14px;line-height:1.45}
+.c-engine{background:var(--clay-lavender)}
+.c-memory{background:var(--clay-pink)}
+.c-hands{background:var(--clay-peach)}
+.c-manual{background:var(--clay-mint)}
+</style>
+</head>
+<body>
+<div class="banner">
+  <div class="copy">
+    <span class="wordmark">Gullin</span>
+    <div>
+      <span class="eyebrow">Inside the harness</span>
+      <h1 class="headline">The AI is the engine.<br>The harness is the whole car.</h1>
+    </div>
+    <span class="url">gullin.work</span>
+  </div>
+
+  <div class="harness">
+    <span class="harness-label">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+      Gullin harness
+    </span>
+    <div class="parts">
+      <div class="card c-engine">
+        <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span>
+        <span class="tag" style="text-transform:none">LLMs</span>
+        <span class="title">The engine</span>
+        <p class="body">Language models that read, reason and write.</p>
+      </div>
+      <div class="card c-memory">
+        <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13"/><path d="M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg></span>
+        <span class="tag">State management</span>
+        <span class="title">The memory</span>
+        <p class="body">Built-in storage, so the AI remembers past conversations with your clients.</p>
+      </div>
+      <div class="card c-hands">
+        <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3.5 17.5a1.8 1.8 0 0 0 2.5 2.5l5.8-5.8a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.3-.6-.6-2.3z"/></svg></span>
+        <span class="tag">Tool calling</span>
+        <span class="title">The hands</span>
+        <p class="body">Lets the AI take real actions in your apps, like sending an email or checking your database.</p>
+      </div>
+      <div class="card c-manual">
+        <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/><path d="M9 7.5h6M9 11h4"/></svg></span>
+        <span class="tag">RAG</span>
+        <span class="title">The manual</span>
+        <p class="body">Connects the AI to your own documents, so its answers follow your business rules.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
