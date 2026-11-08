@@ -5,68 +5,95 @@
 <title>Gullin banner, vertical 1080×1920</title>
 <link rel="stylesheet" href="banner.css">
 <style>
-.banner{width:1080px;height:1920px;padding:110px 96px 104px;display:flex;flex-direction:column;justify-content:space-between}
+.banner{width:1080px;height:1920px;padding:100px 96px 96px;display:flex;flex-direction:column;justify-content:space-between}
 .wordmark{font-size:60px}
-.headline{margin-top:56px;font-size:96px}
+.headline{margin-top:52px;font-size:96px}
+html[lang="es"] .headline{font-size:88px}
 .sub{margin-top:28px;font-size:36px;max-width:860px}
 
 .flow{display:flex;flex-direction:column}
-.card{width:600px;padding:28px 34px;gap:18px}
+.card{width:580px;padding:26px 32px;gap:16px}
 .card.left{align-self:flex-start;transform:rotate(-2.5deg)}
 .card.right{align-self:flex-end;transform:rotate(2.5deg)}
 .tag{font-size:19px}
 .row{display:flex;align-items:center;gap:20px}
-.avatar{width:62px;height:62px;font-size:26px}
-.subject{font-size:30px;font-weight:600}
-.lines{display:flex;flex-direction:column;gap:14px}
-.line{height:14px}
+.avatar{width:58px;height:58px;font-size:24px}
+.subject{font-size:28px;font-weight:600}
+.lines{display:flex;flex-direction:column;gap:13px}
+.line{height:13px}
 .turn{padding:8px 18px;font-size:20px}
-.approve-q{font-size:32px;font-weight:600}
-.chip{height:62px;padding:0 30px;font-size:24px}
-.tick{width:68px;height:68px}
-.amount{font-family:var(--font-display);font-size:64px;font-weight:500;letter-spacing:-0.03em;line-height:1}
-.arrow{width:100px;height:56px;margin:4px 0}
+.approve-q{font-size:30px;font-weight:600}
+.chip{height:58px;padding:0 28px;font-size:23px}
+.tick{width:64px;height:64px}
+.amount{font-family:var(--font-display);font-size:60px;font-weight:500;letter-spacing:-0.03em;line-height:1}
+.arrow{width:96px;height:52px;margin:2px 0}
 .arrow.to-right{align-self:center;transform:translateX(40px)}
 .arrow.to-left{align-self:center;transform:translateX(-40px) scaleX(-1)}
 
-.foot{display:flex;align-items:center;justify-content:space-between}
-.join{display:inline-flex;align-items:center;height:84px;padding:0 40px;border-radius:20px;background:var(--clay-ink);color:#fff;font-size:30px;font-weight:600}
-.url{font-size:34px}
+.foot{display:flex;align-items:flex-end;justify-content:space-between;gap:32px}
+.foot-left{display:flex;flex-direction:column;gap:22px}
+.join{display:inline-flex;align-items:center;align-self:flex-start;height:84px;padding:0 40px;border-radius:20px;background:var(--clay-ink);color:#fff;font-size:30px;font-weight:600}
+.url{font-size:36px}
+.qr-cap{font-size:24px}
+.qr-block{display:flex;flex-direction:column;align-items:center;gap:12px}
+.qr{width:210px;height:210px;border-radius:20px}
 </style>
 </head>
 <body>
 <div class="banner">
   <div>
     <span class="wordmark">Gullin</span>
-    <h1 class="headline">Automate the boring<br>parts of your work.</h1>
-    <p class="sub">Gullin pairs AI with a specialized automation harness to handle the routine work, so you can focus on what matters.</p>
+    <h1 class="headline" data-t="headline">Automate the boring<br>parts of your work.</h1>
+    <p class="sub" data-t="sub">Gullin pairs AI with a specialized automation harness to handle the routine work, so you can focus on what matters.</p>
   </div>
 
   <div class="flow">
     <div class="card c-email left">
-      <span class="tag">New email</span>
-      <span class="row"><span class="avatar">M</span><span class="subject">Container arriving Thursday</span></span>
+      <span class="tag" data-t="newEmail">New email</span>
+      <span class="row"><span class="avatar">M</span><span class="subject" data-t="subject">Container arriving Thursday</span></span>
     </div>
     <svg class="arrow to-right" viewBox="0 0 110 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4c0 34 40 48 82 52M84 46l12 10-14 6"/></svg>
     <div class="card c-draft right">
-      <span class="tag row" style="gap:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Gullin writes</span>
+      <span class="tag row" style="gap:10px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg><span data-t="writes">Gullin writes</span></span>
       <span class="lines"><span class="line" style="width:100%"></span><span class="line" style="width:84%"></span><span class="line" style="width:62%"></span></span>
     </div>
     <svg class="arrow to-left" viewBox="0 0 110 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4c0 34 40 48 82 52M84 46l12 10-14 6"/></svg>
     <div class="card c-approve left">
-      <span class="row" style="justify-content:space-between"><span class="approve-q">Send the request?</span><span class="turn">Your turn</span></span>
-      <span class="chip chip-dark" style="align-self:flex-start">Approve</span>
+      <span class="row" style="justify-content:space-between"><span class="approve-q" data-t="question">Send the request?</span><span class="turn" data-t="turn">Your turn</span></span>
+      <span class="chip chip-dark" style="align-self:flex-start" data-t="approve">Approve</span>
     </div>
     <svg class="arrow to-right" viewBox="0 0 110 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4c0 34 40 48 82 52M84 46l12 10-14 6"/></svg>
     <div class="card c-paid right">
-      <span class="row"><span class="tick"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span style="display:flex;flex-direction:column;gap:8px"><span class="tag">Invoice paid</span><span class="amount">$620</span></span></span>
+      <span class="row"><span class="tick"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span style="display:flex;flex-direction:column;gap:8px"><span class="tag" data-t="paid">Invoice paid</span><span class="amount">$620</span></span></span>
     </div>
   </div>
 
   <div class="foot">
-    <span class="join">Join the waiting list</span>
-    <span class="url">gullin.work</span>
+    <div class="foot-left">
+      <span class="join" data-t="join">Join the waiting list</span>
+      <span class="url">gullin.work</span>
+    </div>
+    <div class="qr-block">
+      <span class="qr"><img src="qr-gullin.svg" alt=""></span>
+      <span class="qr-cap" data-t="scan">Scan to visit</span>
+    </div>
   </div>
 </div>
+<script>
+window.BANNER_COPY = {
+  en: {},
+  es: {
+    headline: 'Automatiza lo aburrido<br>de tu trabajo.',
+    sub: 'Gullin combina IA con un harness de automatización especializado para hacer el trabajo rutinario, y tú te centras en lo que importa.',
+    newEmail: 'Correo nuevo', subject: 'El contenedor llega el jueves',
+    writes: 'Gullin escribe',
+    question: '¿Enviar la petición?', turn: 'Te toca', approve: 'Aprobar',
+    paid: 'Factura cobrada',
+    join: 'Únete a la lista de espera',
+    scan: 'Escanea para visitar'
+  }
+};
+</script>
+<script src="banner-i18n.js"></script>
 </body>
 </html>

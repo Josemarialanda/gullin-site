@@ -5,19 +5,23 @@
 <title>Gullin banner, LLM + harness explainer 1500×500</title>
 <link rel="stylesheet" href="banner.css">
 <style>
-.banner{width:1500px;height:500px;padding:56px 64px;display:flex;align-items:center;gap:48px}
+.banner{width:1500px;height:500px;padding:48px 64px;display:flex;align-items:center;gap:48px}
 .copy{width:480px;height:100%;flex:none;display:flex;flex-direction:column;justify-content:space-between}
 .wordmark{font-size:34px}
 .eyebrow{display:block;margin-bottom:14px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--clay-muted)}
 .headline{font-size:38px;text-wrap:wrap}
+html[lang="es"] .headline{font-size:35px}
+.qr{width:96px;height:96px}
+.qr-cap{font-size:14px}
 .url{font-size:20px}
 
-.eq{flex:1;display:flex;align-items:stretch;height:324px;justify-content:space-between}
+.eq{flex:1;display:flex;align-items:stretch;height:330px;justify-content:space-between}
 .card{width:250px;padding:24px;gap:10px}
 .tag{font-size:12px}
 .icon{flex:none;display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--clay-canvas);color:var(--clay-ink)}
 .title{font-size:20px;font-weight:600;line-height:1.2;letter-spacing:-0.01em}
 .body{margin:0;font-size:15px;line-height:1.45}
+html[lang="es"] .body{font-size:14px}
 .op{align-self:center;flex:none;font-family:var(--font-display);font-size:44px;font-weight:500;color:var(--clay-ink);width:40px;text-align:center}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .pill{display:inline-flex;align-items:center;height:28px;padding:0 10px;border-radius:999px;background:var(--clay-surface-card);font-size:13px;font-weight:600}
@@ -31,18 +35,21 @@
   <div class="copy">
     <span class="wordmark">Gullin</span>
     <div>
-      <span class="eyebrow">How it works</span>
-      <h1 class="headline">AI does the thinking.<br>The harness gets it done.</h1>
+      <span class="eyebrow" data-t="eyebrow">How it works</span>
+      <h1 class="headline" data-t="headline">AI does the thinking.<br>The harness gets it done.</h1>
     </div>
-    <span class="url">gullin.work</span>
+    <div class="qr-row">
+      <span class="qr"><img src="qr-gullin.svg" alt=""></span>
+      <span class="qr-text"><span class="qr-cap" data-t="scan">Scan to visit</span><span class="url">gullin.work</span></span>
+    </div>
   </div>
 
   <div class="eq">
     <div class="card c-draft">
       <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span>
       <span class="tag">LLM</span>
-      <span class="title">The AI model</span>
-      <p class="body">A large language model. It reads and writes like a person, but on its own it can only chat.</p>
+      <span class="title" data-t="t1">The AI model</span>
+      <p class="body" data-t="b1">A large language model. It reads and writes like a person, but on its own it can only chat.</p>
     </div>
 
     <span class="op">+</span>
@@ -50,9 +57,9 @@
     <div class="card c-approve">
       <span class="icon" style="background:var(--clay-surface-card)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/><path d="M10 6.5h4M6.5 10v4M17.5 10v4M10 17.5h4"/></svg></span>
       <span class="tag">Harness</span>
-      <span class="title">The setup around it</span>
-      <p class="body">Connects the AI to your work and keeps it on track.</p>
-      <span class="chips"><span class="pill">Your tools</span><span class="pill">Rules</span><span class="pill">Tested steps</span><span class="pill you">Your approval</span></span>
+      <span class="title" data-t="t2">The setup around it</span>
+      <p class="body" data-t="b2">Connects the AI to your work and keeps it on track.</p>
+      <span class="chips"><span class="pill" data-t="p1">Your tools</span><span class="pill" data-t="p2">Rules</span><span class="pill" data-t="p3">Tested steps</span><span class="pill you" data-t="p4">Your approval</span></span>
     </div>
 
     <span class="op">=</span>
@@ -60,10 +67,28 @@
     <div class="card c-paid">
       <span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
       <span class="tag">Gullin</span>
-      <span class="title">Routine work, handled</span>
-      <p class="body">Replies drafted, invoices sent, payments chased. You focus on what matters.</p>
+      <span class="title" data-t="t3">Routine work, handled</span>
+      <p class="body" data-t="b3">Replies drafted, invoices sent, payments chased. You focus on what matters.</p>
     </div>
   </div>
 </div>
+<script>
+window.BANNER_COPY = {
+  en: {},
+  es: {
+    eyebrow: 'Cómo funciona',
+    headline: 'La IA pone el razonamiento.<br>El harness hace el trabajo.',
+    scan: 'Escanea para visitar',
+    t1: 'El modelo de IA',
+    b1: 'Un modelo de lenguaje grande. Lee y escribe como una persona, pero por sí solo solo puede conversar.',
+    t2: 'Lo que la rodea',
+    b2: 'Conecta la IA a tu trabajo y la mantiene en orden.',
+    p1: 'Tus herramientas', p2: 'Reglas', p3: 'Pasos probados', p4: 'Tu aprobación',
+    t3: 'Trabajo rutinario, resuelto',
+    b3: 'Respuestas redactadas, facturas enviadas, cobros reclamados. Tú te centras en lo que importa.'
+  }
+};
+</script>
+<script src="banner-i18n.js"></script>
 </body>
 </html>

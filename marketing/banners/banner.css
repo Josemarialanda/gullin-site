@@ -28,3 +28,10 @@ body{background:var(--clay-canvas);color:var(--clay-ink);font-family:var(--font-
 
 /* Soft blobs in the background, in the brand palette */
 .blob{position:absolute;border-radius:50%;filter:blur(2px)}
+
+/* QR code to www.gullin.work: the SVG carries its own white quiet zone */
+.qr-row{display:flex;align-items:center;gap:16px}
+.qr{flex:none;display:block;border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 0 0 1px var(--clay-hairline)}
+.qr img{display:block;width:100%;height:100%;image-rendering:pixelated}
+.qr-text{display:flex;flex-direction:column;gap:4px}
+.qr-cap{color:var(--clay-muted);font-weight:500}

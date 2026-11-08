@@ -5,11 +5,14 @@
 <title>Gullin banner, horizontal 1500×500</title>
 <link rel="stylesheet" href="banner.css">
 <style>
-.banner{width:1500px;height:500px;padding:56px 64px;display:flex;align-items:center;gap:56px}
+.banner{width:1500px;height:500px;padding:48px 64px;display:flex;align-items:center;gap:56px}
 .copy{width:600px;height:100%;display:flex;flex-direction:column;justify-content:space-between}
 .wordmark{font-size:34px}
-.headline{font-size:56px}
-.sub{margin-top:18px;font-size:21px;max-width:560px}
+.headline{font-size:54px}
+html[lang="es"] .headline{font-size:50px}
+.sub{margin-top:16px;font-size:20px;max-width:560px}
+.qr{width:96px;height:96px}
+.qr-cap{font-size:14px}
 .url{font-size:20px}
 
 .flow{flex:1;display:flex;align-items:center;justify-content:space-between}
@@ -34,36 +37,54 @@
   <div class="copy">
     <span class="wordmark">Gullin</span>
     <div>
-      <h1 class="headline">Automate the boring<br>parts of your work.</h1>
-      <p class="sub">Gullin pairs AI with a specialized automation harness to handle the routine work, so you can focus on what matters.</p>
+      <h1 class="headline" data-t="headline">Automate the boring<br>parts of your work.</h1>
+      <p class="sub" data-t="sub">Gullin pairs AI with a specialized automation harness to handle the routine work, so you can focus on what matters.</p>
     </div>
-    <span class="url">gullin.work</span>
+    <div class="qr-row">
+      <span class="qr"><img src="qr-gullin.svg" alt=""></span>
+      <span class="qr-text"><span class="qr-cap" data-t="scan">Scan to visit</span><span class="url">gullin.work</span></span>
+    </div>
   </div>
 
   <div class="flow">
     <div class="card c-email up">
-      <span class="tag">New email</span>
+      <span class="tag" data-t="newEmail">New email</span>
       <span class="avatar">M</span>
-      <span class="subject">Container arriving Thursday</span>
+      <span class="subject" data-t="subject">Container arriving Thursday</span>
     </div>
     <svg class="arrow" viewBox="0 0 34 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h28M23 3l7 7-7 7"/></svg>
     <div class="card c-draft down">
-      <span class="tag" style="display:flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Gullin writes</span>
+      <span class="tag" style="display:flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg><span data-t="writes">Gullin writes</span></span>
       <span class="lines"><span class="line" style="width:100%"></span><span class="line" style="width:82%"></span><span class="line" style="width:92%"></span><span class="line" style="width:58%"></span></span>
     </div>
     <svg class="arrow" viewBox="0 0 34 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h28M23 3l7 7-7 7"/></svg>
     <div class="card c-approve up">
-      <span class="turn">Your turn</span>
-      <span class="approve-q">Send the request?</span>
-      <span class="chip chip-dark">Approve</span>
+      <span class="turn" data-t="turn">Your turn</span>
+      <span class="approve-q" data-t="question">Send the request?</span>
+      <span class="chip chip-dark" data-t="approve">Approve</span>
     </div>
     <svg class="arrow" viewBox="0 0 34 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h28M23 3l7 7-7 7"/></svg>
     <div class="card c-paid down">
       <span class="tick"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-      <span class="tag">Paid</span>
+      <span class="tag" data-t="paid">Paid</span>
       <span class="amount">$620</span>
     </div>
   </div>
 </div>
+<script>
+window.BANNER_COPY = {
+  en: {},
+  es: {
+    headline: 'Automatiza lo aburrido<br>de tu trabajo.',
+    sub: 'Gullin combina IA con un harness de automatización especializado para hacer el trabajo rutinario, y tú te centras en lo que importa.',
+    scan: 'Escanea para visitar',
+    newEmail: 'Correo nuevo', subject: 'El contenedor llega el jueves',
+    writes: 'Gullin escribe',
+    turn: 'Te toca', question: '¿Enviar la petición?', approve: 'Aprobar',
+    paid: 'Cobrado'
+  }
+};
+</script>
+<script src="banner-i18n.js"></script>
 </body>
 </html>
