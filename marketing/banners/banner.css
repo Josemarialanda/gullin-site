@@ -1,0 +1,30 @@
+/* Shared styles for the Gullin banners. Uses the site's tokens and fonts. */
+@import url("../../assets/css/fonts.css");
+@import url("../../assets/css/tokens.css");
+
+html,body{margin:0;padding:0}
+body{background:var(--clay-canvas);color:var(--clay-ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased}
+.banner{position:relative;box-sizing:border-box;overflow:hidden;background:var(--clay-canvas)}
+
+.wordmark{font-family:var(--font-display);font-weight:500;letter-spacing:-0.02em;line-height:1}
+.headline{margin:0;font-family:var(--font-display);font-weight:500;line-height:1.02;letter-spacing:-0.035em}
+.sub{margin:0;color:var(--clay-body);line-height:1.4}
+.url{font-weight:600}
+
+/* Flow cards */
+.card{position:relative;box-sizing:border-box;border-radius:28px;display:flex;flex-direction:column;flex:none}
+.tag{font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.c-email{background:var(--clay-pink)}
+.c-draft{background:var(--clay-lavender)}
+.c-approve{background:#fff;border:2px solid var(--clay-hairline);box-shadow:0 10px 30px rgba(10,10,10,.08)}
+.c-paid{background:var(--clay-teal);color:var(--clay-on-dark)}
+.avatar{display:grid;place-items:center;flex:none;border-radius:50%;background:var(--clay-canvas);font-weight:600}
+.line{display:block;border-radius:999px;background:var(--clay-canvas)}
+.chip{display:inline-flex;align-items:center;border-radius:12px;font-weight:600}
+.chip-dark{background:var(--clay-ink);color:#fff}
+.tick{display:grid;place-items:center;flex:none;border-radius:50%;background:var(--clay-ochre);color:var(--clay-ink)}
+.turn{border-radius:999px;background:var(--clay-ochre);font-weight:600}
+.arrow{flex:none;color:var(--clay-ink)}
+
+/* Soft blobs in the background, in the brand palette */
+.blob{position:absolute;border-radius:50%;filter:blur(2px)}
